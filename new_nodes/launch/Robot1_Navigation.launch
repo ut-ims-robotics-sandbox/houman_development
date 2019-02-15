@@ -1,0 +1,9 @@
+<launch>
+    
+ <group ns="Robot1">
+    <include file="$(find turtlebot3_slam)/launch/turtlebot3_slam.launch"/>
+    <include file="$(find turtlebot3_navigation)/launch/move_base.launch"/>
+    <node pkg="new_nodes" type="simple_navigation_goals" name="simple_navigation_goals" 	    output="screen" launch-prefix="xterm -e"/>
+ </group>
+     
+</launch>
